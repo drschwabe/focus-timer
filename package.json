@@ -1,0 +1,16 @@
+{
+  "name": "focustimer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "ft.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "minimist": "^1.1.0",
+    "underscore": "^1.7.0"
+  }
+}
