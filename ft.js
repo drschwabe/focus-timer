@@ -1,13 +1,23 @@
 var argv = require('minimist')(process.argv.slice(2)),
-    _ = require('underscore')
+    _ = require('underscore'),
+    cli = require('cli')
 
-console.log('### Focus Timer ###');
+console.log('\n### Focus Timer ###');
 
 var ft = {}
 
-ft.start = function(milliseconds) {
+ft.start = function(minutes) {
+
+  console.log('-- %s minute session --', minutes)
+
+  cli.spinner('focusing');
+
+  //Convert minutes to milliseconds:
+  var milliseconds = minutes * 60000
+
   setTimeout(function() {
-    console.log('time is up!');
+    //console.log('time is up!');
+    cli.spinner('focus session complete!\n\n', true); //End the spinner
   }, milliseconds)
 }
 
