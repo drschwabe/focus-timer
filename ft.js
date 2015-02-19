@@ -15,8 +15,18 @@ ft.start = function(minutes) {
   //Convert minutes to milliseconds:
   var milliseconds = minutes * 60000
 
+  //For displaying progress:
+  var minutesFocused = 0
+  var spinnerInterval = setInterval(function() {
+    minutesFocused = minutesFocused + 1
+    console.log(' (' + minutesFocused + ' minutes so far) ')
+  }, 60000)
+
+  //End timer:
   setTimeout(function() {
-    //console.log('time is up!');
+    clearInterval(spinnerInterval);
+    console.log(' (' + minutes + ' minutes total)');
+    console.log('\007'); //< Sound effect.
     cli.spinner('focus session complete!\n\n', true); //End the spinner
   }, milliseconds)
 }
