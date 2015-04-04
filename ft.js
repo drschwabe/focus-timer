@@ -4,11 +4,16 @@ var argv = require('minimist')(process.argv.slice(2)),
 
 console.log('\n### Focus Timer ###');
 
+Date.prototype.now = function () {
+   return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes();
+}
+
 var ft = {}
 
 ft.start = function(minutes) {
 
-  console.log('-- %s minute session --', minutes)
+  var newTime = new Date()
+    console.log('-- %s minute session (%s start) --', minutes, newTime.now())
 
   cli.spinner('focusing');
 
@@ -30,6 +35,8 @@ ft.start = function(minutes) {
     cli.spinner('focus session complete!\n\n', true); //End the spinner
   }, milliseconds)
 }
+
+
 
 //Parse user issued command from terminal:
 if( _.isEmpty(argv._) || !ft[argv._[0]]) return;
