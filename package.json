@@ -10,8 +10,8 @@
   "license": "ISC",
   "private": true,
   "dependencies": {
-    "cli": "^0.6.5",
     "minimist": "^1.1.0",
+    "progress": "^1.1.8",
     "underscore": "^1.7.0"
   }
 }
