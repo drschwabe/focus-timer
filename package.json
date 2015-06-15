@@ -1,14 +1,23 @@
 {
-  "name": "focustimer",
+  "name": "focus-timer",
   "version": "0.0.1",
-  "description": "",
+  "description": "A simple timer in the terminal to help you focus.",
   "main": "ft.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": {
+    "name": "Derrick Schwabe",
+    "email": "admin@nerdbusiness.com"
   },
-  "author": "",
-  "license": "ISC",
-  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/drschwabe/focus-timer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drschwabe/focus-timer"
+  },
+  "keywords": [
+    "focus",
+    "timer",
+    "terminal"
+  ],
   "dependencies": {
     "minimist": "^1.1.0",
     "progress": "^1.1.8",
