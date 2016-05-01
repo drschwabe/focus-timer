@@ -1,6 +1,6 @@
 {
   "name": "focus-timer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple timer in the terminal to help you focus.",
   "main": "ft.js",
   "author": {
@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "minimist": "^1.1.0",
+    "node-notifier": "^4.5.0",
     "progress": "^1.1.8",
     "underscore": "^1.7.0"
   },

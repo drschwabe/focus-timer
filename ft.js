@@ -2,7 +2,8 @@
 
 var argv = require('minimist')(process.argv.slice(2)),
     _ = require('underscore'),
-    ProgressBar = require('progress')
+    ProgressBar = require('progress'), 
+    notifier = require('node-notifier')
 
 console.log('\n### Focus Timer ###')
 
@@ -28,6 +29,10 @@ ft.start = function(minutes) {
       var endTime = new Date()
       console.log('focus session complete! (%s end)', endTime.now())
       console.log('\007') //< Sound effect.
+      notifier.notify({
+        title: "Focus Timer", 
+        message: minutes + ' minute session is complete.'
+      })
       clearInterval(timer);
     }
   }, 1000)
